@@ -1,6 +1,6 @@
 # ds551 sp2023 hw01
-# function for question 1
-# Tiana Curry
+# Question 1: get average function
+# By Tiana Curry
 
 import sys
 import pandas as pd
@@ -8,12 +8,13 @@ import json
 
 def aqi_average(aqicsv,aqijson):
     """Summary
-       This function caluates the month averge per year for each country list in the csv file.
-       And outputs as a JSON file.
-       This program takes the follow parameters:
+       - This function caluates the month averge per year for each country list in the csv file.
+       - This program takes the follow parameters:
             - input: an csv file format <file name>.csv
             - output: name of the json file format <file name>.json
-       You can run this program from the CLI using: "python3 stat.py <arg 1> <arg 2>"
+       - You can run this program from the CLI execution format: python3 stat.py <arg 1> <arg 2>
+         ,arg 1=file(.csv) & arg 2=file(.json)
+       - Outputs as a JSON file in current working directory
     """
     # creating desired column in raw dataset
     aqi_df = pd.read_csv(str(aqicsv))
